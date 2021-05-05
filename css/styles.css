@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f9faff;
+  font-family: "Manrope", sans-serif;
+  padding-top: 67px;
+  position: relative; }
+  body::after {
+    background-image: url("./../images/bg-pattern.svg");
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+
+header {
+  padding: 43px 0 37px;
+  position: relative;
+  z-index: 1; }
+  header::after {
+    background-image: url("./../images/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1; }
+
+.main-heading {
+  color: #293356;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 17px;
+  text-align: center; }
+
+.sub-heading {
+  color: #848ead;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center; }
+
+main {
+  padding-top: 54px;
+  position: relative;
+  z-index: 1; }
+
+.pricing-form {
+  background: #ffffff;
+  box-shadow: rgba(127, 137, 185, 0.15) 0 20px 30px -5px;
+  margin: 0 auto;
+  width: 540px; }
+  .pricing-form .slider-section {
+    padding: 48px 45px 40px; }
+    .pricing-form .slider-section label {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      line-height: 1;
+      margin-bottom: 30px;
+      width: 100%; }
+    .pricing-form .slider-section .pageviews-label {
+      color: #848ead;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase; }
+    .pricing-form .slider-section .price-label {
+      align-items: center;
+      color: #848ead;
+      display: flex;
+      font-size: 16px;
+      font-weight: 600; }
+      .pricing-form .slider-section .price-label .price {
+        color: #293356;
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: -1px;
+        margin-right: 6px; }
+    .pricing-form .slider-section .slider {
+      width: 100%; }
+  .pricing-form .toggle-section {
+    padding: 0 45px 40px; }
+  .pricing-form .trial-section {
+    align-items: center;
+    border-top: solid 1px #ecf0fb;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 45px 30px; }
+    .pricing-form .trial-section .trial-info {
+      list-style: none; }
+      .pricing-form .trial-section .trial-info li {
+        color: #848ead;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1; }
+        .pricing-form .trial-section .trial-info li + li {
+          margin-top: 17px; }
+        .pricing-form .trial-section .trial-info li::before {
+          content: url("./../images/icon-check.svg");
+          margin-right: 17px; }
+    .pricing-form .trial-section .trial-button {
+      background: #293356;
+      border: 0;
+      border-radius: 20.5px;
+      color: #becdff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+      padding: 15px 49px 14px; }
