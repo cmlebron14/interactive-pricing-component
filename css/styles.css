@@ -58,7 +58,10 @@ main {
   margin: 0 auto;
   width: 540px; }
   .pricing-form .slider-section {
-    padding: 48px 45px 40px; }
+    padding: 48px 45px 40px;
+    /***********************
+      WEBKIT SLIDER STYLES
+    ***********************/ }
     .pricing-form .slider-section label {
       align-items: center;
       display: flex;
@@ -86,8 +89,75 @@ main {
         margin-right: 6px; }
     .pricing-form .slider-section .slider {
       width: 100%; }
+    .pricing-form .slider-section input[type="range"] {
+      -webkit-appearance: none; }
+    .pricing-form .slider-section input[type="range"]:focus {
+      outline: none; }
+    .pricing-form .slider-section input[type="range"]::-webkit-slider-runnable-track {
+      background: linear-gradient(to right, #a4f3eb 0%, #a4f3eb 50%, #ecf0fb 50%, #ecf0fb 100%);
+      border: none;
+      border-radius: 5px;
+      height: 8px;
+      width: 100%; }
+    .pricing-form .slider-section input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background-color: #10d8c4;
+      background-image: url("./../images/icon-slider.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      border: none;
+      border-radius: 50%;
+      box-shadow: rgba(0, 255, 231, 0.6) 0 15px 30px 0;
+      cursor: pointer;
+      height: 40px;
+      margin-top: -16px;
+      position: relative;
+      width: 40px; }
+      .pricing-form .slider-section input[type="range"]::-webkit-slider-thumb:active {
+        background-color: #24aea1;
+        cursor: grabbing; }
   .pricing-form .toggle-section {
     padding: 0 45px 40px; }
+    .pricing-form .toggle-section .billing-toggle label {
+      color: #848ead;
+      font-size: 12px;
+      font-weight: 600; }
+    .pricing-form .toggle-section .billing-toggle .discount {
+      background: #feede8;
+      border-radius: 9.5px;
+      color: #ff8d68;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 2px 7px 3px; }
+    .pricing-form .toggle-section .billing-toggle .toggle-wrapper {
+      display: inline-block;
+      height: 22px;
+      width: 43px;
+      position: relative; }
+      .pricing-form .toggle-section .billing-toggle .toggle-wrapper .toggle-bg {
+        background: #cfd8ef;
+        border-radius: 15px;
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 0; }
+      .pricing-form .toggle-section .billing-toggle .toggle-wrapper .toggle-switch {
+        background: #ffffff;
+        border-radius: 50%;
+        display: block;
+        height: 14px;
+        left: 4px;
+        position: absolute;
+        transition: all 0.1s ease-in-out;
+        top: 4px;
+        width: 14px; }
+      .pricing-form .toggle-section .billing-toggle .toggle-wrapper #yearly:checked ~ .toggle-bg {
+        background: #7aeadf; }
+      .pricing-form .toggle-section .billing-toggle .toggle-wrapper #yearly:checked ~ .toggle-switch {
+        left: 25px; }
   .pricing-form .trial-section {
     align-items: center;
     border-top: solid 1px #ecf0fb;
@@ -111,7 +181,10 @@ main {
       border: 0;
       border-radius: 20.5px;
       color: #becdff;
+      cursor: pointer;
       font-size: 12px;
       font-weight: 600;
       line-height: 1;
       padding: 15px 49px 14px; }
+      .pricing-form .trial-section .trial-button:hover {
+        color: #ffffff; }

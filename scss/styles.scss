@@ -1,14 +1,14 @@
 $white: #ffffff;
 $zircon: #f9faff;
-$link-water: #cfd8ef; //toggle bg
-$link-water-2: #ecf0fb; //empty slider bar
+$link-water: #cfd8ef;
+$link-water-2: #ecf0fb;
 $periwinkle: #becdff;
 $bali-hai: #848ead;
 $rhino: #293356;
 
 $ice-cold: #a4f3eb; //slider bar
-$aquamarine: #80fff3; //slider button arrows
-$turquoise: #10d8c4; // slider button
+$aquamarine: #80fff3;
+$turquoise: #10d8c4;
 
 $bridesmaid: #feede8; //discount bg
 $salmon: #ff8d68; //discount text
@@ -124,10 +124,103 @@ main {
 		.slider {
 			width: 100%;
 		}
+
+		/***********************
+      WEBKIT SLIDER STYLES
+    ***********************/
+		input[type="range"] {
+			-webkit-appearance: none;
+		}
+		input[type="range"]:focus {
+			outline: none;
+		}
+		input[type="range"]::-webkit-slider-runnable-track {
+			background: linear-gradient(
+				to right,
+				$ice-cold 0%,
+				$ice-cold 50%,
+				$link-water-2 50%,
+				$link-water-2 100%
+			);
+			border: none;
+			border-radius: 5px;
+			height: 8px;
+			width: 100%;
+		}
+		input[type="range"]::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			background-color: $turquoise;
+			background-image: url("./../images/icon-slider.svg");
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			border: none;
+			border-radius: 50%;
+			box-shadow: rgba(0, 255, 231, 0.6) 0 15px 30px 0;
+			cursor: pointer;
+			height: 40px;
+			margin-top: -16px;
+			position: relative;
+			width: 40px;
+			&:active {
+				background-color: #24aea1;
+				cursor: grabbing;
+			}
+		}
 	} //slider-section
 
 	.toggle-section {
 		padding: 0 45px 40px;
+
+		.billing-toggle {
+			label {
+				color: $bali-hai;
+				font-size: 12px;
+				font-weight: 600;
+			}
+			.discount {
+				background: $bridesmaid;
+				border-radius: 9.5px;
+				color: $salmon;
+				font-size: 10px;
+				font-weight: bold;
+				padding: 2px 7px 3px;
+			}
+			.toggle-wrapper {
+				display: inline-block;
+				height: 22px;
+				width: 43px;
+				position: relative;
+
+				.toggle-bg {
+					background: $link-water;
+					border-radius: 15px;
+					display: block;
+					height: 100%;
+					left: 0;
+					position: absolute;
+					top: 0;
+					width: 100%;
+					z-index: 0;
+				}
+				.toggle-switch {
+					background: $white;
+					border-radius: 50%;
+					display: block;
+					height: 14px;
+					left: 4px;
+					position: absolute;
+					transition: all 0.1s ease-in-out;
+					top: 4px;
+					width: 14px;
+				}
+				#yearly:checked ~ .toggle-bg {
+					background: #7aeadf;
+				}
+				#yearly:checked ~ .toggle-switch {
+					left: 25px;
+				}
+			}
+		}
 	} //toggle-section
 
 	.trial-section {
@@ -161,10 +254,14 @@ main {
 			border: 0;
 			border-radius: 20.5px;
 			color: $periwinkle;
+			cursor: pointer;
 			font-size: 12px;
 			font-weight: 600;
 			line-height: 1;
 			padding: 15px 49px 14px;
+			&:hover {
+				color: $white;
+			}
 		}
 	} //trial-section
 } //pricing-form
