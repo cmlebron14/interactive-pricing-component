@@ -82,19 +82,22 @@ main {
 
 .pricing-form {
 	background: $white;
+	border-radius: 8px;
 	box-shadow: rgba(127, 137, 185, 0.15) 0 20px 30px -5px;
 	margin: 0 auto;
 	width: 540px;
 
 	.slider-section {
-		padding: 48px 45px 40px;
+		padding: 48px 45px 51px;
+		position: relative;
 
 		label {
 			align-items: center;
 			display: flex;
 			justify-content: space-between;
 			line-height: 1;
-			margin-bottom: 30px;
+			margin-bottom: 38px;
+			padding-right: 3px;
 			width: 100%;
 		}
 
@@ -118,12 +121,33 @@ main {
 				font-size: 40px;
 				font-weight: 800;
 				letter-spacing: -1px;
-				margin-right: 6px;
+				margin-right: 9px;
 			}
 		}
 
+		.price-value {
+			margin-left: -7px;
+		}
+
 		.slider {
+			position: relative;
 			width: 100%;
+		}
+
+		.slider-bg {
+			background: linear-gradient(
+				to right,
+				$ice-cold 0%,
+				$ice-cold 50%,
+				$link-water-2 50%,
+				$link-water-2 100%
+			);
+			border-radius: 8px;
+			bottom: 56px;
+			height: 8px;
+			left: 45px;
+			position: absolute;
+			width: 83.5%;
 		}
 
 		/***********************
@@ -138,13 +162,7 @@ main {
 		}
 
 		input[type="range"]::-webkit-slider-runnable-track {
-			background: linear-gradient(
-				to right,
-				$ice-cold 0%,
-				$ice-cold 50%,
-				$link-water-2 50%,
-				$link-water-2 100%
-			);
+			background: transparent;
 			border: none;
 			border-radius: 5px;
 			height: 8px;
@@ -165,6 +183,7 @@ main {
 			margin-top: -16px;
 			position: relative;
 			width: 40px;
+			z-index: 1;
 
 			&:hover {
 				background-color: #7aeadf;
@@ -189,6 +208,7 @@ main {
 				color: $bali-hai;
 				font-size: 12px;
 				font-weight: 600;
+				margin-bottom: 3px;
 				position: relative;
 			}
 
@@ -208,7 +228,7 @@ main {
 			.toggle-wrapper {
 				display: flex;
 				height: 22px;
-				margin: 0 15px;
+				margin: 0 16px;
 				position: relative;
 				width: 43px;
 
@@ -261,7 +281,7 @@ main {
 		border-top: solid 1px #ecf0fb;
 		display: flex;
 		justify-content: space-between;
-		padding: 35px 45px 30px;
+		padding: 35px 45px 34px;
 
 		.trial-info {
 			list-style: none;
@@ -273,12 +293,13 @@ main {
 				line-height: 1;
 
 				+ li {
-					margin-top: 17px;
+					margin-top: 15px;
 				}
 
 				&::before {
 					content: url("./../images/icon-check.svg");
-					margin-right: 17px;
+					margin-right: 15px;
+					padding-left: 2px;
 				}
 			}
 		}
@@ -287,12 +308,16 @@ main {
 			background: $rhino;
 			border: 0;
 			border-radius: 20.5px;
+			bottom: 1px;
 			color: $periwinkle;
 			cursor: pointer;
 			font-size: 12px;
 			font-weight: 600;
+			left: 1px;
+			letter-spacing: 0.4px;
 			line-height: 1;
-			padding: 15px 49px 14px;
+			padding: 15px 45px 14px;
+			position: relative;
 
 			&:hover {
 				color: $white;
