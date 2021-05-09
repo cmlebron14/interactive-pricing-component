@@ -1,0 +1,39 @@
+body {
+	background: $zircon;
+	font-family: $manrope;
+	padding-top: 51px;
+	position: relative;
+
+	&::after {
+		background-image: url("./../images/bg-pattern.svg");
+		background-repeat: no-repeat;
+		content: "";
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: -16%;
+		width: 100%;
+	}
+
+	@media (min-width: 600px) {
+		padding-top: 67px;
+		&::before {
+			top: 0;
+		}
+	}
+}
+
+.pricing-form {
+	background: $white;
+	border-radius: 8px;
+	box-shadow: rgba(127, 137, 185, 0.15) 0 20px 30px -5px;
+	margin: 27px auto 88px;
+	position: relative;
+	z-index: 1;
+	width: 327px;
+
+	@media (min-width: 600px) {
+		margin: 54px auto 88px;
+		width: 540px;
+	}
+}

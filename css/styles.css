@@ -3,10 +3,20 @@
   margin: 0;
   padding: 0; }
 
+.show-mobile {
+  display: none; }
+  @media (max-width: 599px) {
+    .show-mobile {
+      display: inline-block; } }
+
+@media (max-width: 599px) {
+  .hide-mobile {
+    display: none; } }
+
 body {
   background: #f9faff;
   font-family: "Manrope", sans-serif;
-  padding-top: 67px;
+  padding-top: 51px;
   position: relative; }
   body::after {
     background-image: url("./../images/bg-pattern.svg");
@@ -15,17 +25,33 @@ body {
     height: 100%;
     left: 0;
     position: absolute;
-    top: 0;
+    top: -16%;
     width: 100%; }
+  @media (min-width: 600px) {
+    body {
+      padding-top: 67px; }
+      body::before {
+        top: 0; } }
 
-header {
+.pricing-form {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: rgba(127, 137, 185, 0.15) 0 20px 30px -5px;
+  margin: 27px auto 88px;
+  position: relative;
+  z-index: 1;
+  width: 327px; }
+  @media (min-width: 600px) {
+    .pricing-form {
+      margin: 54px auto 88px;
+      width: 540px; } }
+
+.heading-section {
   padding: 43px 0 37px;
   position: relative;
   z-index: 1; }
-  header::after {
-    background-image: url("./../images/pattern-circles.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+  .heading-section::after {
+    background: url("./../images/pattern-circles.svg") no-repeat 50% 50%;
     content: "";
     height: 100%;
     left: 0;
@@ -33,199 +59,259 @@ header {
     top: 0;
     width: 100%;
     z-index: -1; }
+  .heading-section .main-heading {
+    color: #293356;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 11px;
+    text-align: center; }
+    @media (min-width: 600px) {
+      .heading-section .main-heading {
+        font-size: 28px;
+        margin-bottom: 17px; } }
+  .heading-section .sub-heading {
+    color: #848ead;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 auto;
+    line-height: 1.8;
+    text-align: center;
+    width: 32%; }
+    @media (min-width: 600px) {
+      .heading-section .sub-heading {
+        font-size: 15px;
+        line-height: normal;
+        margin: 0;
+        width: 100%; } }
 
-.main-heading {
-  color: #293356;
-  font-size: 28px;
-  font-weight: 800;
-  line-height: 1;
-  margin-bottom: 17px;
-  text-align: center; }
-
-.sub-heading {
-  color: #848ead;
-  font-size: 15px;
-  font-weight: 600;
-  text-align: center; }
-
-main {
-  padding-top: 54px;
+.slider-section {
+  display: flex;
+  flex-direction: column;
+  padding: 34px 24px;
   position: relative;
-  z-index: 1; }
-
-.pricing-form {
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: rgba(127, 137, 185, 0.15) 0 20px 30px -5px;
-  margin: 0 auto;
-  width: 540px; }
-  .pricing-form .slider-section {
-    padding: 48px 45px 51px;
-    position: relative;
-    /***********************
-      WEBKIT SLIDER STYLES
-    ***********************/ }
-    .pricing-form .slider-section label {
+  /***********************
+    WEBKIT SLIDER STYLES
+  ***********************/ }
+  @media (min-width: 600px) {
+    .slider-section {
       align-items: center;
-      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-between;
-      line-height: 1;
-      margin-bottom: 38px;
-      padding-right: 3px;
+      padding: 40px 45px 51px; } }
+  .slider-section .pageviews-wrapper {
+    color: #848ead;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+    margin-bottom: 31px;
+    text-align: center;
+    text-transform: uppercase; }
+    @media (min-width: 600px) {
+      .slider-section .pageviews-wrapper {
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 0; } }
+  .slider-section .slider-wrapper {
+    margin-bottom: 35px;
+    position: relative; }
+    @media (min-width: 600px) {
+      .slider-section .slider-wrapper {
+        margin-bottom: 0;
+        margin-top: 31px;
+        order: 3;
+        width: 100%; } }
+    .slider-section .slider-wrapper .slider {
       width: 100%; }
-    .pricing-form .slider-section .pageviews-label {
-      color: #848ead;
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase; }
-    .pricing-form .slider-section .price-label {
-      align-items: center;
-      color: #848ead;
-      display: flex;
-      font-size: 16px;
-      font-weight: 600; }
-      .pricing-form .slider-section .price-label .price {
-        color: #293356;
-        font-size: 40px;
-        font-weight: 800;
-        letter-spacing: -1px;
-        margin-right: 9px; }
-    .pricing-form .slider-section .price-value {
-      margin-left: -7px; }
-    .pricing-form .slider-section .slider {
-      position: relative;
-      width: 100%; }
-    .pricing-form .slider-section .slider-bg {
+    .slider-section .slider-wrapper .slider-bg {
       background: linear-gradient(to right, #a4f3eb 0%, #a4f3eb 50%, #ecf0fb 50%, #ecf0fb 100%);
       border-radius: 8px;
-      bottom: 56px;
+      bottom: 5px;
       height: 8px;
-      left: 45px;
+      left: 0;
       position: absolute;
-      width: 83.5%; }
-    .pricing-form .slider-section input[type="range"] {
-      -webkit-appearance: none; }
-    .pricing-form .slider-section input[type="range"]:focus {
-      outline: none; }
-    .pricing-form .slider-section input[type="range"]::-webkit-slider-runnable-track {
-      background: transparent;
-      border: none;
-      border-radius: 5px;
-      height: 8px;
       width: 100%; }
-    .pricing-form .slider-section input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      background-color: #10d8c4;
-      background-image: url("./../images/icon-slider.svg");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      border: none;
-      border-radius: 50%;
-      box-shadow: rgba(0, 255, 231, 0.6) 0 15px 30px 0;
-      cursor: pointer;
-      height: 40px;
-      margin-top: -16px;
-      position: relative;
-      width: 40px;
-      z-index: 1; }
-      .pricing-form .slider-section input[type="range"]::-webkit-slider-thumb:hover {
-        background-color: #7aeadf; }
-      .pricing-form .slider-section input[type="range"]::-webkit-slider-thumb:active {
-        background-color: #24aea1;
-        cursor: grabbing; }
-  .pricing-form .toggle-section {
-    padding: 0 45px 40px; }
-    .pricing-form .toggle-section .billing-toggle {
-      align-items: center;
-      display: flex;
-      justify-content: center; }
-      .pricing-form .toggle-section .billing-toggle label {
-        color: #848ead;
-        font-size: 12px;
-        font-weight: 600;
-        margin-bottom: 3px;
-        position: relative; }
-      .pricing-form .toggle-section .billing-toggle .discount {
-        background: #feede8;
-        border-radius: 9.5px;
-        color: #ff8d68;
-        font-size: 10px;
-        font-weight: bold;
+  .slider-section .price-wrapper {
+    align-items: center;
+    color: #848ead;
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    justify-content: center;
+    padding-right: 2px; }
+    @media (min-width: 600px) {
+      .slider-section .price-wrapper {
+        font-size: 16px;
+        order: 2;
+        padding-right: 3px; } }
+    .slider-section .price-wrapper .price {
+      color: #293356;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-right: 11px; }
+      @media (min-width: 600px) {
+        .slider-section .price-wrapper .price {
+          font-size: 40px;
+          margin-right: 9px; } }
+      .slider-section .price-wrapper .price .price-value {
+        margin-left: -5px; }
+        @media (min-width: 600px) {
+          .slider-section .price-wrapper .price .price-value {
+            margin-left: -7px; } }
+  .slider-section input[type="range"] {
+    -webkit-appearance: none; }
+  .slider-section input[type="range"]:focus {
+    outline: none; }
+  .slider-section input[type="range"]::-webkit-slider-runnable-track {
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    height: 8px;
+    width: 100%; }
+  .slider-section input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #10d8c4;
+    background-image: url("./../images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: none;
+    border-radius: 50%;
+    box-shadow: rgba(0, 255, 231, 0.6) 0 15px 30px 0;
+    cursor: pointer;
+    height: 40px;
+    margin-top: -16px;
+    position: relative;
+    width: 40px;
+    z-index: 1; }
+    .slider-section input[type="range"]::-webkit-slider-thumb:hover {
+      background-color: #7aeadf; }
+    .slider-section input[type="range"]::-webkit-slider-thumb:active {
+      background-color: #24aea1;
+      cursor: grabbing; }
+
+.toggle-section {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0 37px 38px 24px; }
+  @media (min-width: 600px) {
+    .toggle-section {
+      padding: 0 45px 40px; } }
+  .toggle-section label {
+    color: #848ead;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    margin-bottom: 2px;
+    position: relative; }
+    @media (min-width: 600px) {
+      .toggle-section label {
+        letter-spacing: 0;
+        margin-bottom: 3px; } }
+  .toggle-section .discount {
+    background: #feede8;
+    border-radius: 9.5px;
+    color: #ff8d68;
+    font-size: 10px;
+    font-weight: bold;
+    left: 105%;
+    padding: 2px 8px 3px;
+    position: absolute;
+    top: -1px;
+    white-space: nowrap; }
+    @media (min-width: 600px) {
+      .toggle-section .discount {
         left: 112%;
         padding: 2px 7px 3px;
-        position: absolute;
-        top: 0;
-        white-space: nowrap; }
-      .pricing-form .toggle-section .billing-toggle .toggle-wrapper {
-        display: flex;
-        height: 22px;
-        margin: 0 16px;
-        position: relative;
-        width: 43px; }
-        .pricing-form .toggle-section .billing-toggle .toggle-wrapper .radio-btn {
-          cursor: pointer;
-          height: 100%;
-          opacity: 0;
-          position: relative;
-          width: 50%;
-          z-index: 1; }
-        .pricing-form .toggle-section .billing-toggle .toggle-wrapper .toggle-bg {
-          background: #cfd8ef;
-          border-radius: 15px;
-          display: block;
-          height: 100%;
-          left: 0;
-          position: absolute;
-          top: 0;
-          width: 100%;
-          z-index: 0; }
-        .pricing-form .toggle-section .billing-toggle .toggle-wrapper .toggle-switch {
-          background: #ffffff;
-          border-radius: 50%;
-          display: block;
-          height: 14px;
-          left: 4px;
-          position: absolute;
-          transition: all 0.1s ease-in-out;
-          top: 4px;
-          width: 14px; }
-        .pricing-form .toggle-section .billing-toggle .toggle-wrapper .radio-btn:hover ~ .toggle-bg {
-          background: #7aeadf; }
-        .pricing-form .toggle-section .billing-toggle .toggle-wrapper #yearly:checked ~ .toggle-switch {
-          left: 25px; }
-  .pricing-form .trial-section {
-    align-items: center;
-    border-top: solid 1px #ecf0fb;
+        top: 0; } }
+  .toggle-section .toggle-wrapper {
     display: flex;
-    justify-content: space-between;
-    padding: 35px 45px 34px; }
-    .pricing-form .trial-section .trial-info {
-      list-style: none; }
-      .pricing-form .trial-section .trial-info li {
-        color: #848ead;
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 1; }
-        .pricing-form .trial-section .trial-info li + li {
-          margin-top: 15px; }
-        .pricing-form .trial-section .trial-info li::before {
-          content: url("./../images/icon-check.svg");
-          margin-right: 15px;
-          padding-left: 2px; }
-    .pricing-form .trial-section .trial-button {
-      background: #293356;
-      border: 0;
-      border-radius: 20.5px;
-      bottom: 1px;
-      color: #becdff;
+    height: 22px;
+    margin: 0 12px;
+    position: relative;
+    width: 43px; }
+    @media (min-width: 600px) {
+      .toggle-section .toggle-wrapper {
+        margin: 0 16px; } }
+    .toggle-section .toggle-wrapper .radio-btn {
       cursor: pointer;
+      height: 100%;
+      opacity: 0;
+      position: relative;
+      width: 50%;
+      z-index: 1; }
+    .toggle-section .toggle-wrapper .toggle-bg {
+      background: #cfd8ef;
+      border-radius: 15px;
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 0; }
+    .toggle-section .toggle-wrapper .toggle-switch {
+      background: #ffffff;
+      border-radius: 50%;
+      display: block;
+      height: 14px;
+      left: 4px;
+      position: absolute;
+      transition: all 0.1s ease-in-out;
+      top: 4px;
+      width: 14px; }
+    .toggle-section .toggle-wrapper .radio-btn:hover ~ .toggle-bg {
+      background: #7aeadf; }
+    .toggle-section .toggle-wrapper #yearly:checked ~ .toggle-switch {
+      left: 25px; }
+
+.trial-section {
+  align-items: center;
+  border-top: solid 1px #ecf0fb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 27px 24px 31px; }
+  @media (min-width: 600px) {
+    .trial-section {
+      flex-direction: row;
+      padding: 35px 45px 34px; } }
+  .trial-section .trial-info {
+    list-style: none;
+    margin-bottom: 35px; }
+    @media (min-width: 600px) {
+      .trial-section .trial-info {
+        margin-bottom: 0; } }
+    .trial-section .trial-info li {
+      color: #848ead;
       font-size: 12px;
       font-weight: 600;
-      left: 1px;
-      letter-spacing: 0.4px;
-      line-height: 1;
-      padding: 15px 45px 14px;
-      position: relative; }
-      .pricing-form .trial-section .trial-button:hover {
-        color: #ffffff; }
+      line-height: 1; }
+      .trial-section .trial-info li + li {
+        margin-top: 15px; }
+      .trial-section .trial-info li::before {
+        content: url("./../images/icon-check.svg");
+        margin-right: 15px;
+        padding-left: 2px; }
+  .trial-section .trial-button {
+    background: #293356;
+    border: 0;
+    border-radius: 20.5px;
+    bottom: 1px;
+    color: #becdff;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    left: -1px;
+    letter-spacing: 0.35px;
+    line-height: 1;
+    padding: 15px 45px 14px;
+    position: relative; }
+    .trial-section .trial-button:hover {
+      color: #ffffff; }
+    @media (min-width: 600px) {
+      .trial-section .trial-button {
+        left: 1px;
+        letter-spacing: 0.4px; } }

@@ -1,0 +1,144 @@
+.slider-section {
+	display: flex;
+	flex-direction: column;
+	padding: 34px 24px;
+	position: relative;
+
+	@media (min-width: 600px) {
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 40px 45px 51px;
+	}
+
+	.pageviews-wrapper {
+		color: $bali-hai;
+		font-size: 12px;
+		font-weight: 800;
+		letter-spacing: 1.7px;
+		margin-bottom: 31px;
+		text-align: center;
+		text-transform: uppercase;
+
+		@media (min-width: 600px) {
+			font-size: 14px;
+			letter-spacing: 2px;
+			margin-bottom: 0;
+		}
+	}
+
+	.slider-wrapper {
+		margin-bottom: 35px;
+		position: relative;
+
+		@media (min-width: 600px) {
+			margin-bottom: 0;
+			margin-top: 31px;
+			order: 3;
+			width: 100%;
+		}
+
+		.slider {
+			width: 100%;
+		}
+
+		.slider-bg {
+			background: linear-gradient(
+				to right,
+				$ice-cold 0%,
+				$ice-cold 50%,
+				$link-water-2 50%,
+				$link-water-2 100%
+			);
+			border-radius: 8px;
+			bottom: 5px;
+			height: 8px;
+			left: 0;
+			position: absolute;
+			width: 100%;
+		}
+	}
+
+	.price-wrapper {
+		align-items: center;
+		color: $bali-hai;
+		display: flex;
+		font-size: 14px;
+		font-weight: 600;
+		justify-content: center;
+		padding-right: 2px;
+
+		@media (min-width: 600px) {
+			font-size: 16px;
+			order: 2;
+			padding-right: 3px;
+		}
+
+		.price {
+			color: $rhino;
+			font-size: 32px;
+			font-weight: 800;
+			letter-spacing: -1px;
+			margin-right: 11px;
+
+			@media (min-width: 600px) {
+				font-size: 40px;
+				margin-right: 9px;
+			}
+
+			.price-value {
+				margin-left: -5px;
+
+				@media (min-width: 600px) {
+					margin-left: -7px;
+				}
+			}
+		}
+	}
+
+	/***********************
+    WEBKIT SLIDER STYLES
+  ***********************/
+	input[type="range"] {
+		-webkit-appearance: none;
+	}
+
+	input[type="range"]:focus {
+		outline: none;
+	}
+
+	input[type="range"]::-webkit-slider-runnable-track {
+		background: transparent;
+		border: none;
+		border-radius: 5px;
+		height: 8px;
+		width: 100%;
+	}
+
+	input[type="range"]::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		background-color: $turquoise;
+		background-image: url("./../images/icon-slider.svg");
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		border: none;
+		border-radius: 50%;
+		box-shadow: rgba(0, 255, 231, 0.6) 0 15px 30px 0;
+		cursor: pointer;
+		height: 40px;
+		margin-top: -16px;
+		position: relative;
+		width: 40px;
+		z-index: 1;
+
+		&:hover {
+			background-color: #7aeadf;
+		}
+
+		&:active {
+			background-color: #24aea1;
+			cursor: grabbing;
+		}
+	}
+}

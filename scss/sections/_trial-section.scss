@@ -1,0 +1,64 @@
+.trial-section {
+	align-items: center;
+	border-top: solid 1px #ecf0fb;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 27px 24px 31px;
+
+	@media (min-width: 600px) {
+		flex-direction: row;
+		padding: 35px 45px 34px;
+	}
+
+	.trial-info {
+		list-style: none;
+		margin-bottom: 35px;
+
+		@media (min-width: 600px) {
+			margin-bottom: 0;
+		}
+
+		li {
+			color: $bali-hai;
+			font-size: 12px;
+			font-weight: 600;
+			line-height: 1;
+
+			+ li {
+				margin-top: 15px;
+			}
+
+			&::before {
+				content: url("./../images/icon-check.svg");
+				margin-right: 15px;
+				padding-left: 2px;
+			}
+		}
+	}
+
+	.trial-button {
+		background: $rhino;
+		border: 0;
+		border-radius: 20.5px;
+		bottom: 1px;
+		color: $periwinkle;
+		cursor: pointer;
+		font-size: 12px;
+		font-weight: 600;
+		left: -1px;
+		letter-spacing: 0.35px;
+		line-height: 1;
+		padding: 15px 45px 14px;
+		position: relative;
+
+		&:hover {
+			color: $white;
+		}
+
+		@media (min-width: 600px) {
+			left: 1px;
+			letter-spacing: 0.4px;
+		}
+	}
+}

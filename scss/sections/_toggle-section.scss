@@ -1,0 +1,96 @@
+.toggle-section {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	padding: 0 37px 38px 24px;
+
+	@media (min-width: 600px) {
+		padding: 0 45px 40px;
+	}
+
+	label {
+		color: $bali-hai;
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 0.1px;
+		margin-bottom: 2px;
+		position: relative;
+
+		@media (min-width: 600px) {
+			letter-spacing: 0;
+			margin-bottom: 3px;
+		}
+	}
+
+	.discount {
+		background: $bridesmaid;
+		border-radius: 9.5px;
+		color: $salmon;
+		font-size: 10px;
+		font-weight: bold;
+		left: 105%;
+		padding: 2px 8px 3px;
+		position: absolute;
+		top: -1px;
+		white-space: nowrap;
+
+		@media (min-width: 600px) {
+			left: 112%;
+			padding: 2px 7px 3px;
+			top: 0;
+		}
+	}
+
+	.toggle-wrapper {
+		display: flex;
+		height: 22px;
+		margin: 0 12px;
+		position: relative;
+		width: 43px;
+
+		@media (min-width: 600px) {
+			margin: 0 16px;
+		}
+
+		.radio-btn {
+			cursor: pointer;
+			height: 100%;
+			opacity: 0;
+			position: relative;
+			width: 50%;
+			z-index: 1;
+		}
+
+		.toggle-bg {
+			background: $link-water;
+			border-radius: 15px;
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 0;
+		}
+
+		.toggle-switch {
+			background: $white;
+			border-radius: 50%;
+			display: block;
+			height: 14px;
+			left: 4px;
+			position: absolute;
+			transition: all 0.1s ease-in-out;
+			top: 4px;
+			width: 14px;
+		}
+
+		.radio-btn:hover ~ .toggle-bg {
+			background: #7aeadf;
+		}
+
+		#yearly:checked ~ .toggle-switch {
+			left: 25px;
+		}
+	}
+}
