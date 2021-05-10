@@ -39,6 +39,13 @@
 			width: 100%;
 		}
 
+		label {
+			display: block;
+			height: 0;
+			opacity: 0;
+			visibility: hidden;
+		}
+
 		.slider {
 			width: 100%;
 		}
